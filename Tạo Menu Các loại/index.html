@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tạo Menu Các Loại</title>
+    <link rel="stylesheet" href="style.css"/>	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+
+    <!--Thu vien JS /> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js.js"></script>
+     <!--Thu vien JS /> -->
+
+
+</head>
+<body>
+   <div class="wrapper">
+		<header id="header">
+			<nav id="main_menu" class="clearfix">
+				<div class="mega_main_menu">
+					<ul class="mega_main_menu_ul">
+						<li class="menu_item" id="menu_item1000">
+							<a href="#"><span class="link_text">Home</span></a>
+							<ul class="sub_mega_menu">
+							 	<li class="menu_item" id="menu_item1001">
+							 		<a href="#"><span class="link_text">Homeshop2</span></a>
+							 	</li>
+							 	<li class="menu_item" id="menu_item1002">
+							 	    <a href="#"><span class="link_text">Homeshop3</span></a>
+							 	</li>
+							</ul>
+						</li>
+						<li class="menu_item" id="menu_item2000">
+							<a href="#"><span class="link_text">Shop</span></a>
+							<ul class="sub_mega_menu">
+							 	<li class="menu_item" id="menu_item2001">
+							 		<a href="#"><span class="link_text">Shop1</span></a>
+							 	</li>
+							 	<li class="menu_item" id="menu_item2002">
+							 	    <a href="#"><span class="link_text">Shop2</span></a>
+							 	</li>
+							 	<li class="menu_item" id="menu_item2003">
+							 	    <a href="#"><span class="link_text">Shop3</span></a>
+							 	</li>
+							 </ul>
+						</li>
+						<li class="menu_item" id="menu_item2001">
+							<a href="#"><span class="link_text">Blog</span></a>
+						</li>
+						<li class="menu_item" id="menu_itemm20002">
+							<a href="#"><span class="link_text">Pages</span></a>
+						</li>
+						<li class="menu_item" id="menu_item2003">
+							<a href="#"><span class="link_text">Portfolio</span></a>
+						</li>
+						<li class="menu_item" id="menu_item2004">
+							<a href="#"><span class="link_text">New posts</span></a>
+						</li>
+					</ul>
+				</div>
+			</nav>	
+		</header>
+	<div>
+
+
+    <script >
+    	var x=document.getElementsByClassName("sub_mega_menu");
+    	if(x<=80){
+          /* x.style.animation-play-state="paused";*/
+           x.style.background="green";
+   		}
+    </script>
+	<!-- <script >
+	$(document).ready(function(){
+	     if ($("ul.mega_main_menu_ul li >ul").length) {
+	 		 $("ul.mega_main_menu_ul li ").css("background", "red");
+		}
+	    });
+		display_submenu();
+	</script>
+	 -->
+	
+</body>
+</html>

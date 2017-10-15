@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.clear_fix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container{
+	width: 60%;
+	margin: 30px auto;
+
+}
+ul.tab{
+	list-style-type: none;	
+	border-bottom: 1px solid #999999;
+    border-left:1px solid #999999;
+}
+
+ul li{
+	float: left;
+	padding:10px 20px;
+    background: #eeeeee;	
+    border: 1px solid #999999;
+    border-left: none;
+    border-bottom: none;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #333333;
+}
+
+ul li:hover{
+	 background: #CCCCCC;
+}
+
+ul li:active{
+	 background: #ffffff;
+	 border-bottom: none;
+}

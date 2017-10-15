@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		test
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body >
+	<div ID="show_html">
+		
+	</div>
+	<textarea ID="vanbangoc" onchange="change()" rows="30" cols="30">Cong hoa xa hoi chu nghia vietnam</textarea>
+	<textarea ID="vanban_input" rows="30" cols="30"></textarea>
+	<button type="" onclick="input_1()">Click</button>
+	
+</body>
+<script>
+	
+		cur_point = 0;
+		var vanbangoc_text = $('#vanbangoc').val();
+		var arr=vanbangoc_text.split(" ");
+		var size = arr.length;
+		for(i = 0; i< size; i++){
+				$('#show_html').append('<span class="span_text" id="span_' + i + '">' + arr[i] + '</span>');
+			}	
+
+		function change(){
+			var vanbangoc_text = $('#vanbangoc').val();
+			cur_point = 0;
+			$('#show_html').html('');//reset lai 
+			//document.getElementById('show_html').innerHTML="";
+			$('#vanban_input').val('');
+			var arr=vanbangoc_text.split(" ");
+			var size = arr.length;
+			for(i = 0; i< size; i++){
+					$('#show_html').append('<span class="span_text" id="span_' + i + '">' + arr[i] + '</span>');
+				}	
+		}
+			
+		function input_1(){
+			
+			var vanbangoc_text = $('#vanbangoc').val();
+			var arr=vanbangoc_text.split(" ");
+			var size = arr.length;
+			var input_2 = $('#vanban_input').val();
+			
+			if(typeof arr[cur_point]!= 'undefined'){
+				input_2 += ' ' +  arr[cur_point];
+				//$('.span_text').removeClass('active');
+				// var temp=$('#span_' + cur_point);
+				// temp.removeClass('active');
+				$('#span_' + cur_point).addClass('active');
+				$('#vanban_input').val(input_2);
+				cur_point++;
+			}
+		}
+		
+</script>
+<style type="text/css" media="screen">
+	.span_text {
+		display: inline-block;
+		padding-right:  5px;
+	}
+
+	.active {
+		color: red;
+	}
+</style>
+</html>
